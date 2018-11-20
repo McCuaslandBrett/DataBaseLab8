@@ -14,7 +14,7 @@ CREATE FUNCTION add_partnumber()
 RETURNS "trigger" AS
 $BODY$
 BEGIN
-  NEW.partnumber := nextval('part_number_seq');
+  NEW.part_number := nextval('part_number_seq');
   return NEW;
   -- Values (partnumber);
  END;
