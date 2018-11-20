@@ -17,7 +17,7 @@ BEGIN
   Insert into part_nyc(supplier,color,on_hand,descr)
   Values (partnumber);
 RETURN END;
-$BODY$
+$$
 LANGUAGE 'plpgsql';
 
 -- 3.Use the following syntax to create a trigger calling the procedure
