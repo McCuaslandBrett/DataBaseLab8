@@ -14,8 +14,8 @@ CREATE FUNCTION add_partnumber()
 RETURNS "trigger" AS
 $BODY$
 BEGIN
-  Insert into part_nyc(supplier ,color ,on_hand) 
-  Values (0,0,20,nextval('part_number_seq'));
+  NEW.partnumber := nextval('part_number_seq');
+  return NEW;
   -- Values (partnumber);
  END;
 $BODY$
@@ -23,7 +23,7 @@ LANGUAGE 'plpgsql' VOLATILE;
 
 -- 3.Use the following syntax to create a trigger calling the procedure
 -- upon insertion of the new record:
-CREATE TRIGGER addpartnumber
+CREATE TRIGGER addpartnumber_pyc
   BEFORE INSERT
   ON part_nyc
   FOR EACH STATEMENT
