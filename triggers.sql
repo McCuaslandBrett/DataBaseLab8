@@ -6,14 +6,16 @@
 CREATE SEQUENCE partnumber START 50000;
 
 -- 2.Create a procedure that will return next value of the
--- aforementioned sequence. Use function nextval(’part number seq’) to get the next value from the sequence.
+-- aforementioned sequence. Use function nextval(’part number seq’)
+-- to get the next value from the sequence.
 -- Use the following syntax to create your procedure:
 CREATE LANGUAGE plpgsql ;
-CREATE OR REPLACE FUNCTION func add_partnumber()
+CREATE OR REPLACE FUNCTION func add_partnumber
 RETURNS trigger AS
 $BODY$
 BEGIN
-Insert into part_nyc(supplier,color,on_hand,descr) Values (0,0,20,’Desc’);
+Insert into part_nyc(supplier,color,on_hand,descr)
+Values (0,0,20,’Desc’);
 RETURN END;
 $BODY$
 LANGUAGE 'plpgsql';
