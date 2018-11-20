@@ -3,7 +3,7 @@
 -- should not include value for part number and will look like this:
 
 -- Insert into part nyc(supplier ,color ,on hand,descr) Values (0,0,20,’Desc’);
-CREATE OR REPLACE FUNCTION SEQUENCE CREATE SEQUENCE part_number_seq START WITH 50000;
+CREATE SEQUENCE part_number_seq START WITH 50000;
 
 -- 2.Create a procedure that will return next value of the
 -- aforementioned sequence. Use function nextval(’part number seq’)
