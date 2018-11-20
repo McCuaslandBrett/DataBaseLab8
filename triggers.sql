@@ -10,7 +10,7 @@ CREATE SEQUENCE partnumber START 50000;
 -- to get the next value from the sequence.
 -- Use the following syntax to create your procedure:
 CREATE LANGUAGE plpgsql ;
-CREATE OR REPLACE FUNCTION func add_partnumber()
+CREATE FUNCTION func add_partnumber()
 RETURNS trigger AS
 $$
 BEGIN
