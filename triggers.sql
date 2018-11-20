@@ -16,7 +16,7 @@ $$
 BEGIN
   Insert into part_nyc(supplier,color,on_hand,descr)
   Values (partnumber);
-RETURN END;
+RETURN END
 $$
 LANGUAGE 'plpgsql';
 
