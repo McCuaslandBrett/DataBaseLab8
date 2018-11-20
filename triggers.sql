@@ -15,7 +15,7 @@ RETURNS trigger AS
 $$
 BEGIN
   Insert into part_nyc(supplier,color,on_hand,descr)
-  Values (0,0,20,’Desc’);
+  Values (partnumber);
 RETURN END;
 $BODY$
 LANGUAGE 'plpgsql';
