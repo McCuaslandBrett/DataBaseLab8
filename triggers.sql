@@ -26,5 +26,5 @@ LANGUAGE 'plpgsql' VOLATILE;
 CREATE TRIGGER addpartnumber_pyc
   BEFORE INSERT
   ON part_nyc
-  FOR EACH STATEMENT
+  FOR EACH ROW
   EXECUTE PROCEDURE add_partnumber();
