@@ -18,7 +18,7 @@ BEGIN
   Values (partnumber);
 RETURN END
 $$
-LANGUAGE 'plpgsql';
+-- LANGUAGE 'plpgsql';
 
 -- 3.Use the following syntax to create a trigger calling the procedure
 -- upon insertion of the new record:
