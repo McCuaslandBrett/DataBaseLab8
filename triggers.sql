@@ -14,7 +14,7 @@ CREATE FUNCTION add_partnumber()
 RETURNS "trigger" AS
 $BODY$
 BEGIN
-  Insert into part_nyc(supplier ,color ,on_hand,descr) Values (0,0,20,’Desc’);
+  Insert into part_nyc(supplier ,color ,on_hand,descr) Values (0,0,20,nextval('part_number_seq'));
   -- Values (partnumber);
  END;
 $BODY$
