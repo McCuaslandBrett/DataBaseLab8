@@ -11,19 +11,19 @@ CREATE OR REPLACE FUNCTION SEQUENCE partnumber START 50000;
 -- Use the following syntax to create your procedure:
 CREATE LANGUAGE plpgsql ;
 CREATE FUNCTION func add_partnumber()
-RETURNS TRIGGER AS $add_part$
-$$
+RETURNS "TRIGGER" AS
+$BODY$
 BEGIN
-  Insert into part_nyc(supplier,color,on_hand,descr)
-  Values (partnumber);
-RETURN END
-$$
--- LANGUAGE 'plpgsql';
+  Insert into part nyc(supplier ,color ,on hand,descr) Values (0,0,20,’Desc’);
+  -- Values (partnumber);
+ END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
 
 -- 3.Use the following syntax to create a trigger calling the procedure
 -- upon insertion of the new record:
 CREATE TRIGGER addpartnumber
-  BEFORE  INSERT
+  BEFORE INSERT
   ON part_nyc
   FOR EACH STATEMENT
   EXECUTE PROCEDURE add_partnumber();
