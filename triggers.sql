@@ -11,10 +11,10 @@ CREATE OR REPLACE FUNCTION SEQUENCE CREATE SEQUENCE part_number_seq START WITH 5
 -- Use the following syntax to create your procedure:
 CREATE LANGUAGE plpgsql ;
 CREATE FUNCTION add_partnumber()
-RETURNS "TRIGGER" AS
+RETURNS "trigger" AS
 $BODY$
 BEGIN
-  Insert into part nyc(supplier ,color ,on hand,descr) Values (0,0,20,’Desc’);
+  Insert into part_nyc(supplier ,color ,on hand,descr) Values (0,0,20,’Desc’);
   -- Values (partnumber);
  END;
 $BODY$
