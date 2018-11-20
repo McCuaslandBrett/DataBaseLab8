@@ -17,7 +17,7 @@ BEGIN
   NEW.part_number := nextval('part_number_seq');
   return NEW;
   -- Values (partnumber);
- END;
+ END
 $BODY$
 LANGUAGE 'plpgsql' VOLATILE;
 
